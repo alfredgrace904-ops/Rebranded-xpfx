@@ -1,13 +1,10 @@
 {
-  "name": "@workspace/api-zod",
-  "version": "0.0.0",
-  "packageManager": "pnpm@9.5.0",
+  "name": "xpf-root",
   "private": true,
-  "type": "module",
-  "exports": {
-    ".": "./src/index.ts"
-  },
-  "dependencies": {
-    "zod": "^3.23.8"
+  "packageManager": "pnpm@9.5.0",
+  "scripts": {
+    "build": "pnpm --filter @workspace/api-server build",
+    "dev": "pnpm --filter @workspace/api-server dev",
+    "start": "pnpm --filter @workspace/api-server start"
   }
 }
