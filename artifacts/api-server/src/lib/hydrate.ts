@@ -53,7 +53,7 @@ export async function hydrateFromDb(): Promise<void> {
         fullName: row.fullName,
         country: row.country,
         kycVerified: row.kycVerified,
-        avatarUrl: row.avatarUrl ?? null,
+        avatarUrl: row.avatarUrl ?? undefined,
         createdAt: row.createdAt.toISOString(),
         selectedManagerId: row.selectedManagerId ?? null,
         phone: row.phone ?? null,

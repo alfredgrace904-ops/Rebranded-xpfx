@@ -155,6 +155,7 @@ const liveChatRateLimit = rateLimit({
   standardHeaders: "draft-7",
   legacyHeaders: false,
   keyGenerator: (req) => (req as typeof req & { userId?: string }).userId ?? req.ip ?? "unknown",
+  validate: { keyGeneratorIpFallback: false },
   message: { error: "Too many messages. Please wait before sending another." },
   skip: () => !isProduction,
 });
