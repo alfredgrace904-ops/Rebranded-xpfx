@@ -1,4 +1,4 @@
-modules = ["nodejs-20", "web", "bash"]
+modules = ["nodejs-20", "web", "bash", "postgresql-16"]
 [agent]
 expertMode = true
 
@@ -22,11 +22,7 @@ externalPort = 3003
 
 [[ports]]
 localPort = 8080
-externalPort = 80
-
-[[ports]]
-localPort = 8081
-externalPort = 8081
+externalPort = 8080
 
 [[ports]]
 localPort = 25580
@@ -45,3 +41,8 @@ deploymentTarget = "cloudrun"
 LOG_LEVEL = "info"
 ALLOWED_ORIGINS = "https://xpressprofx.com,https://www.xpressprofx.com"
 APP_NAME = "XpressPro FX"
+PORT = "8080"
+NODE_ENV = "development"
+ENABLE_DEMO_AUTH = "true"
+
+[workflows]
